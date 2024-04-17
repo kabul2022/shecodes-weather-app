@@ -14,34 +14,38 @@
 <body>
   <div class="weather-app"> 
   <header>
-    <form>
-<input type="search" placeholder="Enter a city.."requried />
-<input type="submit" value="search"/>
+    <form class="search-form">
+<input type="search" placeholder="Enter a city.."requried class="search-form-input" />
+<input type="submit" value="search"class="search-form-button"/>
 </form>
   </header>
   <main>
+    
+    <div class="weather-app-data">
     <div>
-      <h1>
-        paris
-      </h1>
-      <p>
+      <h1 class="weather-app-city"> Paris</h1>
+       <p  class="weather-app-details">
         Monday 21:26 , Cloudy
         <br />
-        Humidity: 65% , Wind :32km/h
+        Humidity:<strong>65%</strong>  , Wind :<strong>32km/h</strong>
+        
       </p>
     </div>
-    <div>🌨️12&#176C</div>
-    
-    </main>
+    <div class="weather-app-temperature-container">
+    <div class="weather-app-icon">⛅</div>
+    <div class="weather-app-temperature">12</div>
+    <div class="weather-app-unit">&#176C</div>
+  </div>
+    </div>
   </main>
   
   <footer>
-    Coded by 
-    <a href="https://github.com/kabul2022"target="blank">Aziza Rezaie</a> and it's, 
+    This project coded by
+    <a href="https://github.com/kabul2022"target="blank">Aziza Rezaie</a> it's, 
     <a href="https://github.com/kabul2022/shecodes-weather-app"target="blank"> on GitHub</a> and websidte hosted  
     <a href="https://weeks7-homework.netlify.app/" target="blank"> on netlify</a>
   </footer>
-  </div>
+</div>
 
 </body>
 </html>
