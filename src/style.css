@@ -1,5 +1,5 @@
 body{
-  background-color:rgb(254, 227, 254);
+  background-color:rgb(239, 226, 239);
   font-family:  "Roboto", sans-serif;
 }
 a{
@@ -11,11 +11,11 @@ a{
   margin: 45px auto;
   border-radius: 16px;
   padding: 30px;
-  box-shadow: 0 30px 50px rgb(238, 187, 238);
+  box-shadow: 0 30px 30px rgb(249, 210, 249);
 }
 
 header{
-  border-bottom: 1px solid rgb(238, 187, 238);
+  border-bottom: 1px solid rgb(230, 206, 230);
   padding: 0 0 30px 0;
 }
 .search-form-input{
