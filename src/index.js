@@ -72,3 +72,5 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit",hanndleSearch);
 
 searchCity("Kabul");
+
+displayForecast()
