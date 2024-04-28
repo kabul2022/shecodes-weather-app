@@ -12,6 +12,7 @@ function refreshWeather(response) {
        iconElement.innerHTML=`<img src="${response.data.condition.icon_url}"
         class="weather-app-icon"/>`
       
+       
 timeElement.innerHTML= formatDate(date);
 
   cityElement.innerHTML = response.data.city;
@@ -19,6 +20,7 @@ timeElement.innerHTML= formatDate(date);
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
   temperatureElement.innerHTML = Math.round(temperature);
+  getForecast(response.data.city);
   
 }
   function formatDate(date) {
@@ -49,7 +51,16 @@ function hanndleSearch(event) {
   
   searchCity(searchInput.value);
 }
-function displayForecast() {
+
+
+function getForecast(city) {
+  let apikey ="bb01a8cf18ea9o4532af5fe21atc5f3a";
+  let apiUrl =`https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apikey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data);
   let days =["Tue","Wed","Thu","Fri","Sat"];
   let forecastHTML = "";
   days.forEach(function(day) {
@@ -71,8 +82,9 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
   
-displayForecast();
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit",hanndleSearch);
 
 searchCity("Kabul");
+
